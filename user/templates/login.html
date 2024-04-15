@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Giriş Yap</h1>
+
+
+
+<form method="POST" novalidate>
+    {% csrf_token %}
+  {% for field in form %}
+  
+  <label for=""> {{field.label}} </label>
+  
+
+
+  {{field}} 
+  {% endfor %}
+  <input type="submit" class="btn btn-outline-dark m-2 w-50" value="Kaydet" />
+</form>
+
+{% endblock content %}
